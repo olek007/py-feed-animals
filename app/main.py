@@ -7,13 +7,13 @@ class Animal(object):
         self.appetite = appetite
         self.is_hungry = is_hungry
         if not self.is_hungry:
-            self.appetite = False
+            self.appetite = 0
 
     def print_name(self) -> None:
         print(f"Hello, I'm {self.name}")
 
     def feed(self) -> int:
-        if self.appetite > 0:
+        if self.is_hungry:
             print(f"Eating {self.appetite} food points...")
             self.is_hungry = False
             result = self.appetite
